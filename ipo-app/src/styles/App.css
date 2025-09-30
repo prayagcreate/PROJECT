@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Sora', sans-serif;
+  background-color: #f4f7f9;
+  margin: 0;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+/* IPO List Page */
+.ipo-list-page {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+.ipo-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ipo-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s;
+}
+
+.ipo-card:hover {
+  transform: translateY(-5px);
+}
+
+.company-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  background-color: #ccc; /* Placeholder for logo */
+  border-radius: 50%;
+}
+
+.issue-size, .price-range, .min-invest {
+  flex: 1;
+  text-align: center;
+}
+
+.min-invest p {
+  margin: 0;
+}
+
+/* IPO Details Page */
+.ipo-details-page {
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-nav {
+  cursor: pointer;
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.download-button {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.details-grid > div {
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.timeline-section {
+  margin-top: 30px;
+}
+
+.timeline-grid {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline-grid::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #ccc;
+  z-index: 1;
+}
+
+.timeline-step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 1;
+}
+
+.timeline-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .ipo-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .issue-size, .price-range, .min-invest {
+    text-align: left;
+  }
+  
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .timeline-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-grid::before {
+    top: 0;
+    left: 15px;
+    height: 100%;
+    width: 2px;
+  }
+  
+  .timeline-step {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .timeline-icon {
+    margin: 0 10px 0 0;
+  }
+}
